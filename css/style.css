@@ -1,5 +1,33 @@
+/* variables */
+:root {
+  /* background colors */
+  --bg-default-color: #0e0e0e;
+  --bg-primary-color: #dac5a7;
+  --bg-secondary-color: #1a1a1a;
+  --bg-muted-color: #dac5a70d; /* 5% opacity */
+  --bg-muted2-color: #ffffff12; /* 7% opacity */
+
+  /* text colors */
+  --text-default-color: #dac5a7;
+  --text-muted-color: #dac5a799; /* 60% opacity */
+  --text-inverse-color: #0e0e0e;
+  --text-inverse-muted-color: #ffffff99; /* 60% opacity */
+
+  /* border colors */
+  --border-default-color: #dac5a726; /* 15% opacity */
+  --border-inverse-color: #ffffff1f; /* 12% opacity */
+
+  /* icones color */
+  --icon-default-color: #dac5a7;
+  --icon-inverse-color: #0e0e0e;
+}
+
+/* reset */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+body {
+  font-size: 62.5%;
 }
