@@ -154,6 +154,81 @@ img {
   margin: 0 auto;
 }
 
+.starter-circle-box-container {
+  background: var(--bg-default-color);
+  width: 20px;
+  height: 80px;
+  position: absolute;
+  z-index: 5;
+  top: -200px;
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+
+.starter-circle-box {
+  background: var(--bg-muted-color);
+  border: 1px solid var(--border-default-color);
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 5;
+  top: -200px;
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+
+.circle-box-container {
+  background: var(--bg-default-color);
+  width: 20px;
+  height: 80px;
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+}
+
+.circle-box-container-right {
+  right: 0;
+  transform: translate(50%, -20%);
+}
+
+.circle-box-container-left {
+  left: 0;
+  transform: translate(-50%, -20%);
+}
+
+.circle-box {
+  background: var(--bg-muted-color);
+  border: 1px solid var(--border-default-color);
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'satoshi';
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 160%;
+  color: var(--text-default-color);
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+}
+
+.circle-box-left {
+  left: 0;
+  transform: translate(-50%);
+}
+
+.circle-box-right {
+  right: 0;
+  transform: translate(50%);
+}
+
 /* header styling */
 header {
   text-align: center;
@@ -299,6 +374,7 @@ section.services {
 
 .services__introduction {
   display: -webkit-box;
+  line-clamp: 3;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
@@ -408,4 +484,157 @@ section.services {
 .work__about > * {
   transition: opacity 0.5s ease;
   opacity: 0;
+}
+
+/* process section */
+
+.process__header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: center;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.process__title {
+  font-family: 'satoshi', sans-serif;
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 160%;
+  text-transform: uppercase;
+  color: var(--text-default-color);
+}
+
+.process__main-description {
+  font-family: 'chillax';
+  font-weight: 200;
+  font-size: 7.2rem;
+  text-transform: capitalize;
+  color: var(--text-default-color);
+}
+
+.process__description {
+  font-family: 'chillax', sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 170%;
+  color: var(--text-muted-color);
+}
+
+.process__body {
+  margin-top: 300px;
+}
+
+.process__body .box {
+  background: var(--bg-muted-color);
+  border: 1px solid var(--border-default-color);
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 90%;
+  padding: 48px;
+  position: relative;
+}
+
+.process__body .box__label {
+  background: var(--bg-muted-color);
+  border: 1px solid var(--border-default-color);
+  border-radius: 2px;
+  color: var(--text-default-color);
+  padding: 8px;
+  font-family: 'chillax', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 120%;
+  text-transform: uppercase;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.process__body .box__header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.process__body .box__titles {
+  font-family: 'satoshi', sans-serif;
+  text-transform: uppercase;
+}
+
+.process__body .box__titles .box__secondary-title {
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 160%;
+  color: var(--text-muted-color);
+}
+
+.process__body .box__titles .box__main-title {
+  font-weight: 300;
+  font-size: 2.4rem;
+  line-height: 130%;
+  color: var(--text-default-color);
+}
+
+.process__body .box__description {
+  color: var(--text-muted-color);
+  font-family: 'chillax', sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 180%;
+  margin-bottom: 32px;
+}
+.process__body .box__list {
+  list-style-type: disc;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-left: 12px;
+}
+
+.process__body .box__list-items {
+  color: var(--text-default-color);
+  font-family: 'chillax';
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 180%;
+}
+
+.process__body .box__list-items::marker {
+  color: var(--text-default-color);
+}
+
+.right-box {
+  border-left: 1px solid var(--border-default-color);
+}
+
+.left-box {
+  border-right: 1px solid var(--border-default-color);
+}
+
+.box-container {
+  width: 50%;
+  position: relative;
+}
+
+.process__body .first::before {
+  content: '';
+  width: 1px;
+  height: 200px;
+  border-right: 1px solid var(--border-default-color);
+  position: absolute;
+  top: -100px;
+  left: -1px;
+  transform: translate(-50%, -50%);
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.mr-auto {
+  margin-right: auto;
 }
